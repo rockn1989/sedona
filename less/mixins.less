@@ -1,0 +1,38 @@
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.text-size(@fontsize, @lineheight) {
+  font-size: @fontsize;
+  line-height: @lineheight;
+}
+
+
+.text-size(@fontsize) when (@fontsize = 14) {
+  font-size: @fontsize;
+  line-height: 30px;
+}
+
+.text-size(@fontsize) when (@fontsize = 18) {
+  font-size: @fontsize;
+  line-height: 30px;
+}
+
+.text-size(@fontsize) when (@fontsize = 24) {
+  font-size: @fontsize;
+  line-height: 30px;
+}
+
+
+.background-retina(@filename, @fileformat) {
+  background-image: url("../img/@{filename}@1x.@{fileformat}");
+
+  @media @retina-dpi, @retina-ppx {
+    background-image: url("../img/@{filename}@2x.@{fileformat}");
+  }
+
+}
