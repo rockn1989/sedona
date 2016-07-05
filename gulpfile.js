@@ -5,7 +5,9 @@ var less = require("gulp-less");
 var autoprefixer = require("gulp-autoprefixer");
 var plumber = require("gulp-plumber");
 var svgstore = require("gulp-svgstore");
+var svgmin = require("gulp-svgmin");
 var rename = require("gulp-rename");
+var csscomb = require("gulp-csscomb");
 var server = require("browser-sync");
 
 
@@ -19,6 +21,12 @@ var browsers = [
     "ie 10",
     "ie 9"
 ];
+
+gulp.task('csscomb', function() {
+    return gulp.src('css/style.css')
+        .pipe(csscomb())
+        .pipe(gulp.dest('/build/css'));
+});
 
 gulp.task("svgmin", function () {
     return gulp.src("img/*.svg")

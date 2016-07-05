@@ -7,13 +7,16 @@
     "browser-sync": "2.12.10",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "3.1.0",
+    "gulp-csscomb": "^3.0.7",
     "gulp-less": "3.1.0",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.1.1",
     "gulp-rename": "^1.2.2",
+    "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0"
   },
   "scripts": {
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "csscomb": "gulp csscomb"
   }
 }
