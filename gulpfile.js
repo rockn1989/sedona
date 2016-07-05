@@ -4,6 +4,8 @@ var gulp = require("gulp");
 var less = require("gulp-less");
 var autoprefixer = require("gulp-autoprefixer");
 var plumber = require("gulp-plumber");
+var svgstore = require("gulp-svgstore");
+var rename = require("gulp-rename");
 var server = require("browser-sync");
 
 
@@ -18,8 +20,23 @@ var browsers = [
     "ie 9"
 ];
 
+gulp.task("svgmin", function () {
+    return gulp.src("img/*.svg")
+        .pipe(svgmin())
+        .pipe(gulp.dest("build/img/"));
+});
 
-gulp.task("cssbuild", function() {
+gulp.task("svgstore:dev", function () {
+    return gulp
+        .src("img/**/*.svg")
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
+        .pipe(rename("spriteSvg.svg"))
+        .pipe(gulp.dest("img/"));
+});
+
+gulp.task("cssbuild:dev", function() {
     gulp.src("less/style.less")
         .pipe(plumber())
         .pipe(less())
@@ -28,7 +45,7 @@ gulp.task("cssbuild", function() {
         .pipe(server.reload({stream: true}));
 });
 
-gulp.task('serve',["cssbuild"], function () {
+gulp.task('serve',["cssbuild:dev","svgstore:dev"], function () {
    server.init({
        server: ".",
        notify: false,
@@ -36,7 +53,7 @@ gulp.task('serve',["cssbuild"], function () {
        ui: false
    });
     
-    gulp.watch("less/**/*.less", ["cssbuild"]);
+    gulp.watch("less/**/*.less", ["cssbuild:dev"]);
     gulp.watch("*.html").on("change", server.reload);
     
 });
