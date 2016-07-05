@@ -1,0 +1,17 @@
+{
+  "name": "Sedona-Adaptive",
+  "version": "0.1.0",
+  "description": "Верстка Sedona Adaptive",
+  "author": "Артем Рябков",
+  "devDependencies": {
+    "browser-sync": "2.12.10",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-less": "3.1.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.1.1"
+  },
+  "scripts": {
+    "start": "gulp serve"
+  }
+}
