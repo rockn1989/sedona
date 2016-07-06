@@ -25,7 +25,7 @@ var browsers = [
 gulp.task('csscomb', function() {
     return gulp.src('css/style.css')
         .pipe(csscomb())
-        .pipe(gulp.dest('/build/css'));
+        .pipe(gulp.dest('css'));
 });
 
 gulp.task("svgmin", function () {
