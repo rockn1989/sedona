@@ -7,6 +7,45 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+    <header class="page-header">
+        <div class="wrapper">
+            <nav class="main-nav main-nav--open">
+                <ul class="main-nav__lists">
+                    <li class="main-nav__list main-nav__list--hidden main-nav__list--close">
+                        <a href="index.html" class="main-nav__link main-nav__link--close">Главная</a>
+                        <svg width="24" height="24" class="main-nav__menu-icon main-nav__menu-icon--close">
+                            <use xlink:href="img/spriteSvg.svg#icon-cross"></use>
+                        </svg>
+                    </li>
+                    <li class="main-nav__list main-nav__list--hidden">
+                        <a href="photo.html" class="main-nav__link">Фото и видео</a>
+                    </li>
+                    <li class="main-nav__list main-nav__list--hidden">
+                        <a class="main-nav__link main-nav__link--active">Форма отзыва</a>
+                    </li>
+                    <li class="main-nav__list main-nav__list--hidden">
+                        <a href="http://htmlacademy.ru" class="main-nav__link">HTML Academy</a>
+                    </li>
+                    <li class="main-nav__list main-nav__list--open">
+                        <a href="/" class="main-nav__link main-nav__link--open">
+                            <svg width="105" height="85" class="main-nav__logo main-nav__logo-mob">
+                                <use xlink:href="img/spriteSvg.svg#logo-sedona-mobile"></use>
+                            </svg>
+                            <svg width="104" height="83" class="main-nav__logo main-nav__logo-tablet">
+                                <use xlink:href="img/spriteSvg.svg#logo-sedona-tablet"></use>
+                            </svg>
+                            <svg width="187" height="97" class="main-nav__logo main-nav__logo-desktop">
+                                <use xlink:href="img/spriteSvg.svg#logo-sedona-desktop"></use>
+                            </svg>
+                        </a>
+                        <svg width="24" height="24" class="main-nav__menu-icon main-nav__menu-icon--open">
+                            <use xlink:href="img/spriteSvg.svg#icon-menu"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script src="js/main-nav.js"></script>
 </body>
 </html>
