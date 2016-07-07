@@ -1,9 +1,12 @@
 
 .main-nav {
   font-weight: bold;
-  &&--close {
+  & .main-nav__list--hidden {
+    display: none;
+  }
+  &&--open {
     & .main-nav__list--hidden {
-      //display: none;
+      display: block;
     }
   }
 }
