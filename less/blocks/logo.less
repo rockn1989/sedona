@@ -1,0 +1,39 @@
+
+
+.logo {
+  text-align: center;
+  min-height: 210px;
+  padding: 90px 0 75px;
+  background-repeat: no-repeat;
+  background-position: -246px 0;
+  background-size: cover;
+  .background-retina('bg-back-mobile','jpg');
+
+  @media @tablet-width {
+    padding: 76px 0 82px;
+  }
+
+  @media @desktop-width {
+    .background-retina('bg-back-desktop','jpg');
+    background-position: 0 0;
+  }
+
+}
+
+
+
+.logo__svg {
+  &&--tablet {
+    display: none;
+  }
+
+  @media @tablet-width {
+    &&--mob {
+      display: none;
+    }
+    &&--tablet {
+      display: inline;
+    }
+  }
+
+}
