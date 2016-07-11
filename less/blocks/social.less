@@ -1,0 +1,38 @@
+.social {
+  margin-bottom: 38px;
+
+  @media @tablet-width {
+    margin-bottom: 0;
+  }
+
+  @media @desktop-width {
+    padding-right: 94px;
+  }
+
+}
+
+.social-link {
+  display: inline-block;
+  vertical-align: top;
+  text-indent: -9999px;
+  width: 46px;
+  height: 48px;
+  text-decoration: none;
+  background: #81b3d2 50% 50% no-repeat;
+  
+  &&--tw {
+    background-image: url("../img/icons/icon-twitter.svg");
+  }
+  &&--fb {
+    background-image: url("../img/icons/icon-facebook.svg");
+  }
+  &&--yt {
+    background-image: url("../img/icons/icon-youtube.svg");
+  }
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active {
+    background-color: #5496bd;
+  }
+}
