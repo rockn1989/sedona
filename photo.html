@@ -7,43 +7,66 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="page-header">
-        <nav class="main-nav main-nav--open wrapper">
-                <ul class="main-nav__lists">
-                    <li class="main-nav__list main-nav__list--hidden main-nav__list--close">
-                        <a href="index.html" class="main-nav__link main-nav__link--close">Главная</a>
-                        <svg width="24" height="24" class="main-nav__menu-icon main-nav__menu-icon--close">
-                            <use xlink:href="img/spriteSvg.svg#icon-cross"></use>
-                        </svg>
-                    </li>
-                    <li class="main-nav__list main-nav__list--hidden">
-                        <a class="main-nav__link main-nav__link--active">Фото и видео</a>
-                    </li>
-                    <li class="main-nav__list main-nav__list--hidden">
-                        <a href="form.html" class="main-nav__link">Форма отзыва</a>
-                    </li>
-                    <li class="main-nav__list main-nav__list--hidden">
-                        <a href="http://htmlacademy.ru" class="main-nav__link">HTML Academy</a>
-                    </li>
-                    <li class="main-nav__list main-nav__list--open">
-                        <a href="/" class="main-nav__link main-nav__link--open">
-                            <svg width="105" height="85" class="main-nav__logo main-nav__logo-mob">
-                                <use xlink:href="img/spriteSvg.svg#logo-sedona-mobile"></use>
+    <div class="wrapper">
+        <header class="page-header">
+            <nav class="main-nav main-nav--open">
+                    <ul class="main-nav__lists">
+                        <li class="main-nav__list main-nav__list--hidden main-nav__list--close">
+                            <a href="index.html" class="main-nav__link main-nav__link--close">Главная</a>
+                            <svg width="24" height="24" class="main-nav__menu-icon main-nav__menu-icon--close">
+                                <use xlink:href="img/spriteSvg.svg#icon-cross"></use>
                             </svg>
-                            <svg width="104" height="83" class="main-nav__logo main-nav__logo-tablet">
-                                <use xlink:href="img/spriteSvg.svg#logo-sedona-tablet"></use>
+                        </li>
+                        <li class="main-nav__list main-nav__list--hidden">
+                            <a class="main-nav__link main-nav__link--active">Фото и видео</a>
+                        </li>
+                        <li class="main-nav__list main-nav__list--hidden">
+                            <a href="form.html" class="main-nav__link">Форма отзыва</a>
+                        </li>
+                        <li class="main-nav__list main-nav__list--hidden">
+                            <a href="http://htmlacademy.ru" class="main-nav__link">HTML Academy</a>
+                        </li>
+                        <li class="main-nav__list main-nav__list--open">
+                            <a href="/" class="main-nav__link main-nav__link--open">
+                                <svg width="105" height="85" class="main-nav__logo main-nav__logo-mob">
+                                    <use xlink:href="img/spriteSvg.svg#logo-sedona-mobile"></use>
+                                </svg>
+                                <svg width="104" height="83" class="main-nav__logo main-nav__logo-tablet">
+                                    <use xlink:href="img/spriteSvg.svg#logo-sedona-tablet"></use>
+                                </svg>
+                                <svg width="187" height="97" class="main-nav__logo main-nav__logo-desktop">
+                                    <use xlink:href="img/spriteSvg.svg#logo-sedona-desktop"></use>
+                                </svg>
+                            </a>
+                            <svg width="24" height="24" class="main-nav__menu-icon main-nav__menu-icon--open">
+                                <use xlink:href="img/spriteSvg.svg#icon-menu"></use>
                             </svg>
-                            <svg width="187" height="97" class="main-nav__logo main-nav__logo-desktop">
-                                <use xlink:href="img/spriteSvg.svg#logo-sedona-desktop"></use>
-                            </svg>
-                        </a>
-                        <svg width="24" height="24" class="main-nav__menu-icon main-nav__menu-icon--open">
-                            <use xlink:href="img/spriteSvg.svg#icon-menu"></use>
-                        </svg>
-                    </li>
-                </ul>
-            </nav>
-    </header>
+                        </li>
+                    </ul>
+                </nav>
+            <div class="page-header__logo">
+                <div class="logo">
+                    <svg width="280" height="220" class="logo__svg logo__svg--mob">
+                        <use xlink:href="img/spriteSvg.svg#text-sedona-index"></use>
+                    </svg>
+                    <svg width="465" height="355" class="logo__svg logo__svg--tablet">
+                        <use xlink:href="img/spriteSvg.svg#text-sedona-index"></use>
+                    </svg>
+                </div>
+                <div class="page-header__triangle">
+                    <svg width="320" height="30" class="page-header__triangle page-header__triangle--mob">
+                        <use xlink:href="img/spriteSvg.svg#bg-intro-triangle-mobile"></use>
+                    </svg>
+                    <svg width="768" height="60" class="page-header__triangle page-header__triangle--tablet">
+                        <use xlink:href="img/spriteSvg.svg#bg-intro-triangle-tablet"></use>
+                    </svg>
+                    <svg width="1202" height="60" class="page-header__triangle page-header__triangle--desktop">
+                        <use xlink:href="img/spriteSvg.svg#bg-intro-triangle-desktop"></use>
+                    </svg>
+                </div>
+            </div>
+        </header>
+    </div>
     <script src="js/main-nav.js"></script>
 </body>
 </html>
