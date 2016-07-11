@@ -1,4 +1,39 @@
 
 .page-header {
   background-color: #fff;
+  z-index: 5;
+}
+
+.page-header__logo {
+  position: relative;
+}
+
+.page-header__triangle {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  &&--tablet, &&--desktop {
+    display: none;
+  }
+  @media @tablet-width {
+    &&--mob {
+      display: none;
+    }
+    &&--tablet {
+      display: block;
+    }
+  }
+
+  @media @desktop-width {
+    left: -1px;
+    &&--tablet {
+      display: none;
+    }
+
+    &&--desktop {
+      display: block;
+    }
+
+  }
+
 }

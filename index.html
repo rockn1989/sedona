@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="page-header">
-        <nav class="main-nav main-nav--open wrapper">
+    <div class="wrapper">
+        <header class="page-header">
+            <nav class="main-nav main-nav--open">
                 <ul class="main-nav__lists">
                     <li class="main-nav__list main-nav__list--hidden main-nav__list--close">
                         <a class="main-nav__link main-nav__link--active main-nav__link--close">Главная</a>
@@ -43,7 +44,29 @@
                     </li>
                 </ul>
             </nav>
-    </header>
+            <div class="page-header__logo">
+                <div class="logo">
+                    <svg width="280" height="220" class="logo__svg logo__svg--mob">
+                        <use xlink:href="img/spriteSvg.svg#text-sedona-index"></use>
+                    </svg>
+                    <svg width="465" height="355" class="logo__svg logo__svg--tablet">
+                        <use xlink:href="img/spriteSvg.svg#text-sedona-index"></use>
+                    </svg>
+                </div>
+                <div class="page-header__triangle">
+                    <svg width="320" height="30" class="page-header__triangle page-header__triangle--mob">
+                        <use xlink:href="img/spriteSvg.svg#bg-intro-triangle-mobile"></use>
+                    </svg>
+                    <svg width="768" height="60" class="page-header__triangle page-header__triangle--tablet">
+                        <use xlink:href="img/spriteSvg.svg#bg-intro-triangle-tablet"></use>
+                    </svg>
+                    <svg width="1202" height="60" class="page-header__triangle page-header__triangle--desktop">
+                        <use xlink:href="img/spriteSvg.svg#bg-intro-triangle-desktop"></use>
+                    </svg>
+                </div>
+            </div>
+        </header>
+    </div>
     <script src="js/main-nav.js"></script>
 </body>
 </html>
