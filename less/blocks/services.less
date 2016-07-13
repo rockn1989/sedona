@@ -18,6 +18,16 @@
   .text-size(21px, 26px);
   color: #000000;
   margin-bottom: 17px;
+  &&--modify {
+    .text-size(18px, 26px);
+    margin-bottom: 25px;
+
+    @media @tablet-width {
+      .text-size(30px, 26px);
+      margin-bottom: 31px;
+    }
+
+  }
 
   @media @tablet-width {
     .text-size(30px, 26px);
@@ -30,6 +40,9 @@
   .text-size(14px, 24px);
   color: #333333;
   margin-bottom: 35px;
+  &&--modify {
+    padding: 0 20px;
+  }
 
   @media @tablet-width {
     margin-bottom: 41px;
