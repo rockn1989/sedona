@@ -8,7 +8,26 @@
   background-position: -246px 0;
   background-size: cover;
   .background-retina('bg-back-mobile','jpg');
+  &&--padding {
+    padding: 0;
+    padding-top: 52px;
+    background-position: -280px -162px;
+    background-size: auto;
+    min-height: 108px;
 
+    @media @tablet-width {
+      min-height: 195px;
+      padding-top: 95px;
+      background-size: cover;
+      background-position: 0 0;
+    }
+
+    @media @desktop-width {
+      padding-top: 100px;
+      min-height: 200px;
+    }
+
+  }
   @media @tablet-width {
     padding: 76px 0 82px;
   }

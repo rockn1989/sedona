@@ -5,9 +5,33 @@
   text-transform: uppercase;
   padding: 45px 20px 11px;
 
+  &&--padding {
+    border-bottom: 1px solid #e5e5e5;
+    padding-top:38px;
+    padding-bottom: 27px;
+
+    @media @tablet-width {
+      padding: 75px 60px 70px;
+      margin-bottom: 0;
+      border: none;
+      & .page-content__title {
+        .text-size(30px, 26px);
+      }
+    }
+
+    @media @desktop-width {
+      padding-top: 115px;
+    }
+
+  }
+
   @media @tablet-width {
     padding: 50px 60px 20px;
     margin-bottom: 29px;
+  }
+
+  @media @desktop-width {
+
   }
 
 }
@@ -35,4 +59,18 @@
   font-weight: normal;
   .text-size(14px, 26px);
   color: #333333;
+  &&--padding {
+    .text-size(14px, 24px);
+  }
+  @media @tablet-width {
+    padding:  0 80px;
+  }
+
+  @media @desktop-width {
+    padding: 0 280px;
+    &&--padding {
+      padding:0 320px;
+    }
+  }
+
 }
