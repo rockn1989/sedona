@@ -1,0 +1,158 @@
+
+
+
+.user-post {
+  padding: 22px 20px 14px;
+  border-bottom: 1px solid #e5e5e5;
+
+  @media @tablet-width {
+    padding: 0;
+    border: none;
+  }
+
+  @media @desktop-width {
+    position: relative;
+    overflow: hidden;
+  }
+
+}
+
+.user-post__img {
+  height: 280px;
+  margin-bottom: 15px;
+  & img {
+    display: block;
+    height: 100%;
+  }
+
+  @media @tablet-width {
+    margin: 0;
+    height:  267px;
+  }
+
+}
+
+
+.user-post__desc {
+  .text-size(14px, 24px);
+  
+  @media @tablet-width {
+    background-color: #f2f2f2;
+    padding: 16px 20px 8px;
+    position: relative;
+  }
+
+  @media @desktop-width {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
+    padding: 16px 23px 10px;
+  }
+  
+}
+
+
+.user-post__header {
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  @media @desktop-width {
+    color: #ffffff;
+  }
+
+}
+
+.user-post__author {
+  color: #333333;
+  margin-bottom: 7px;
+
+  @media @desktop-width {
+    color: #ffffff;
+  }
+
+}
+
+.user-post__like {
+  color: #000000;
+  font-weight: bold;
+  
+  @media @tablet-width {
+    position: absolute;
+    top: 34%;
+    right: 30px;
+  }
+
+  @media @desktop-width {
+    color: #ffffff;
+  }
+
+}
+
+.user-post__like-svg {
+  margin-right: 13px;
+  fill: #b2b2b2;
+  cursor: pointer;
+
+  @media @tablet-width {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+  }
+
+  @media @desktop-width {
+    fill: #ffffff;
+  }
+
+}
+
+.user-post__like-counter {
+  display: inline-block;
+  padding-top: 2px;
+  vertical-align: top;
+}
+
+
+.user-post.user-post--top {
+  padding: 23px 20px 14px;
+
+  @media @tablet-width {
+    padding: 0;
+    width: 100%;
+    & .user-post__desc {
+      padding: 16px 20px 10px;
+    }
+
+    & .user-post__img {
+      height: 400px;
+      margin-bottom: 0;
+    }
+
+    & .user-post__like {
+      top: 31%;
+      right: 20px;
+    }
+
+    & .user-post__like-svg {
+      margin-right: 7px;
+    }
+
+  }
+
+  @media @desktop-width {
+    position: relative;
+
+    & .user-post__desc {
+      padding: 16px 22px 10px;
+    }
+
+    & .user-post__like {
+      top: 34%;
+    }
+
+  }
+  
+}
