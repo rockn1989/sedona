@@ -1,0 +1,41 @@
+
+.form-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  &&--info {
+    display: block;
+  }
+}
+
+.form-input__label {
+  text-transform: uppercase;
+  .text-size(14px, 26px);
+  color: #333333;
+  margin-right: 20px;
+  &&--info {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 14px;
+  }
+}
+
+.form-input__text {
+  background-color: #f2f2f2;
+  border: none;
+  width: 100%;
+  padding: 20px 22px;
+  .text-size(18px, 26px);
+  outline: none;
+  &&--tel,&&--email {
+    padding-right: 22%;
+  }
+  &&--tel {
+    margin-bottom: 50px;
+    background: url("../img/icon-phone.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 79%,  #e6e6e6 79%);
+  }
+  &&--email {
+    background: url("../img/icon-mail.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 79%,  #e6e6e6 79%);
+  }
+}

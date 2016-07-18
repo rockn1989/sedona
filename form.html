@@ -66,6 +66,106 @@
                 </div>
             </div>
         </header>
+
+        <section class="page-content">
+            <header class="page-content__header page-content__header--padding">
+                <h1 class="page-content__title">
+                    Оставьте свой отзыв
+                </h1>
+                <p class="page-content__description page-content__description--padding">
+                    Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+                </p>
+            </header>
+
+            <section class="page-form">
+                <div class="page-form__wrapper">
+                    <form action="/" class="interview" method="post">
+                        <div class="interview__wrapper">
+                            <fieldset class="interview__section">
+                                <p class="interview__title">Представьтесь, пожалуйста:</p>
+                                <div class="form-input">
+                                    <label class="form-input__label" for="name">Имя:</label>
+                                    <input class="form-input__text" type="text" id="name" placeholder="Петр">
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-input__label" for="surname">Фамилия:</label>
+                                    <input class="form-input__text" type="text" id="surname" placeholder="Иванов">
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-input__label" for="patronymic">Отчество:</label>
+                                    <input class="form-input__text" type="text" id="patronymic" placeholder="Александрович">
+                                </div>
+                            </fieldset>
+                            <fieldset class="interview__section">
+                                <p class="interview__title">Контактная информация:</p>
+                                <div class="form-input form-input--info">
+                                    <label class="form-input__label form-input__label--info" for="tel"><span class="form-input__hidden">Контактный</span> телефон:</label>
+                                    <input class="form-input__text form-input__text--info form-input__text--tel" type="text" id="tel" placeholder="Введите телефон">
+                                </div>
+                                <div class="form-input form-input--info">
+                                    <label class="form-input__label form-input__label--info" for="email">Электронная почта:</label>
+                                    <input class="form-input__text form-input__text--info form-input__text--email" type="text" id="email" placeholder="Введите e-mail">
+                                </div>
+                            </fieldset>
+                            <fieldset class="interview__section">
+                                <p class="interview__title">Ваше общее впечатление:</p>
+                                <label class="form-radio">
+                                    <input type="radio" class="form-radio__control" name="mood" checked>
+                                    <span class="form-radio__state"></span>
+                                    <span class="form-radio__label">Скорее положительное</span>
+                                </label>
+                                <label class="form-radio">
+                                    <input type="radio" class="form-radio__control" name="mood">
+                                    <span class="form-radio__state"></span>
+                                    <span class="form-radio__label">Скорее отрицательное</span>
+                                </label>
+                                <label class="form-radio">
+                                    <input type="radio" class="form-radio__control" name="mood">
+                                    <span class="form-radio__state"></span>
+                                    <span class="form-radio__label">Затрудняюсь ответить</span>
+                                </label>
+                            </fieldset>
+                            <fieldset class="interview__section">
+                                <p class="interview__title">Посещенные достопримечательности:</p>
+                                <label class="form-checkbox">
+                                    <input type="checkbox" class="form-checkbox__control" name="place" checked>
+                                    <span class="form-checkbox__state"></span>
+                                    <span class="form-checkbox__label">Мост дьявола</span>
+                                </label>
+                                <label class="form-checkbox">
+                                    <input type="checkbox" class="form-checkbox__control" name="place" checked>
+                                    <span class="form-checkbox__state"></span>
+                                    <span class="form-checkbox__label">Слайд-парк</span>
+                                </label>
+                                <label class="form-checkbox">
+                                    <input type="checkbox" class="form-checkbox__control" name="place">
+                                    <span class="form-checkbox__state"></span>
+                                    <span class="form-checkbox__label">Гора-колокол</span>
+                                </label>
+                                <label class="form-checkbox">
+                                    <input type="checkbox" class="form-checkbox__control" name="place" checked>
+                                    <span class="form-checkbox__state"></span>
+                                    <span class="form-checkbox__label">Красные скалы</span>
+                                </label>
+                            </fieldset>
+                            <fieldset class="interview__section">
+                                <p class="interview__title">Опишите свои эмоции:</p>
+                                <textarea name="emotions" class="form-textarea" placeholder="Опишите подробно все свои восторги"></textarea>
+                            </fieldset>
+                        </div>
+                        <div class="interview__footer">
+                            <button type="submit" class="button button--send">Отправить отзыв</button>
+                            <div class="rules">
+                                <div class="rules__text">
+                                    * — Обязательные поля
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </section>
         <footer class="page-footer">
             <div class="page-footer__wrapper">
                 <div class="hash-name">#Visitsedona</div>
