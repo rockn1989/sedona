@@ -1,0 +1,111 @@
+
+.form-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  &&--info {
+    display: block;
+  }
+
+  @media @tablet-width {
+    padding-left: 16px;
+    &--info {
+      padding-left: 0;
+      &:nth-child(1) {
+        order: 3;
+        margin-bottom: 0;
+      }
+      &:nth-child(2) {
+        order: 2;
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media @desktop-width {
+    &&--info {
+      width: 400px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      &:nth-child(2) {
+        width: 480px;
+        order: 3;
+      }
+      && .form-input__hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+.form-input__label {
+  text-transform: uppercase;
+  .text-size(14px, 26px);
+  color: #333333;
+  margin-right: 20px;
+  &&--info {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 7px;
+
+    @media @tablet-width {
+      margin-bottom: 7px;
+    }
+    @media @desktop-width {
+      margin-bottom: 0;
+      margin-left:  0;
+    }
+  }
+}
+
+.form-input__text {
+  background-color: #f2f2f2;
+  border: none;
+  width: 100%;
+  padding: 16px 20px;
+  .text-size(18px, 26px);
+  outline: none;
+  &&--tel,&&--email {
+    padding-right: 22%;
+
+    @media @tablet-width {
+      padding-right:  11%;
+    }
+
+  }
+  &&--tel {
+    margin-bottom: 23px;
+    background: url("../img/icon-phone.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 79%,  #e6e6e6 79%);
+
+    @media @tablet-width {
+      background: url("../img/icon-phone.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 91%,  #e6e6e6 91%);
+    }
+
+    @media @desktop-width {
+      margin-bottom: 0;
+      background: url("../img/icon-phone.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 82%,  #e6e6e6 82%);
+    }
+
+  }
+  &&--email {
+    background: url("../img/icon-mail.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 79%,  #e6e6e6 79%);
+
+    @media @tablet-width {
+      background: url("../img/icon-mail.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 91%,  #e6e6e6 91%);
+    }
+
+    @media @desktop-width {
+      width: 316px;
+      background: url("../img/icon-mail.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 82%,  #e6e6e6 82%)
+    }
+
+  }
+}
+
+
+.form-input__hidden {
+  @media @tablet-width {
+    display: none;
+  }
+}
