@@ -3,6 +3,9 @@
   & input[type="text"] {
     box-sizing: border-box;
   }
+  & label {
+    cursor: pointer;
+  }
 }
 
 .interview__wrapper {
@@ -15,6 +18,10 @@
     padding: 0 60px;
   }
 
+  @media @desktop-width {
+    padding:  0 120px;
+  }
+
 }
 
 .interview__inner-wrapper {
@@ -23,6 +30,20 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 95px;
+  }
+
+  @media @desktop-width {
+    padding: 0;
+  }
+
+  &&--no-padding {
+    padding: 0;
+    display: block;
+    @media @desktop-width {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
   }
 }
 
@@ -67,21 +88,13 @@
     &&--info {
       order: 3;
       padding: 43px 0 7px;
-      display: flex;
       & .interview__title {
         order: 1;
         margin-bottom: 25px;
       }
-      & .form-input--info:nth-child(1) {
-        order: 3;
-      }
-      & .form-input--info:nth-child(2) {
-        order: 2;
-        margin-bottom: 0;
-      }
       & .form-input__hidden {
         display: inline;
-    }
+      }
 
     }
     &&--mood {
@@ -104,7 +117,7 @@
     }
     &&--place {
       order: 4;
-      padding: 26px 0 2px;
+      padding: 45px 0 2px;
       & .interview__title {
         padding: 0 185px;
         order: 1;
@@ -129,6 +142,39 @@
       }
     }
   }
+
+  @media @desktop-width {
+    &&--fio {
+      padding: 20px 0;
+      width: 420px;
+      & .form-input__hidden {
+        display: inline;
+      }
+    }
+    &&--mood {
+      width: 480px;
+      padding-left: 5px;
+      & .interview__title {
+        text-align: center;
+        padding-right: 45px;
+      }
+    }
+    &&--info {
+      padding-top: 27px;
+      & .interview__title {
+        margin-bottom:75px;
+      }
+    }
+    &&--place {
+      & .interview__title {
+        padding: 0 275px;
+      }
+    }
+    &&--emotions {
+      padding: 30px 0 12px;
+    }
+  }
+
 }
 
 .interview__title {
@@ -174,6 +220,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media @desktop-width {
+    padding:  0 120px;
   }
 
 }

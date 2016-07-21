@@ -27,8 +27,19 @@
 
   @media @desktop-width {
     display: block;
-    width: 260px;
+    width: 205px;
     margin-right: 0;
+    &:nth-child(1) {
+      order: 1;
+      margin-right: 32px;
+    }
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+    &:nth-child(3) {
+      order: 2;
+      margin-right: 24px;
+    }
   }
 
 }
@@ -48,6 +59,11 @@
     bottom: 7px;
     right: 0;
     margin: auto;
+    @media @desktop-width {
+      width: 10px;
+      height: 17px;
+      bottom: 8px;
+    }
   }
 }
 
@@ -87,7 +103,7 @@
     padding-top: 13px;
   }
   @media @desktop-width {
-    padding-top: 3px;
+    padding-top: 13px;
   }
 }
 
