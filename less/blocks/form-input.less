@@ -7,6 +7,14 @@
   &&--info {
     display: block;
   }
+
+  @media @tablet-width {
+    padding-left:  16px;
+    &--info {
+      padding-left: 0;
+    }
+  }
+
 }
 
 .form-input__label {
@@ -17,7 +25,12 @@
   &&--info {
     display: block;
     margin-left: 20px;
-    margin-bottom: 14px;
+    margin-bottom: 7px;
+
+    @media @tablet-width {
+      margin-bottom: 7px;
+    }
+
   }
 }
 
@@ -25,17 +38,39 @@
   background-color: #f2f2f2;
   border: none;
   width: 100%;
-  padding: 20px 22px;
+  padding: 16px 20px;
   .text-size(18px, 26px);
   outline: none;
   &&--tel,&&--email {
     padding-right: 22%;
+
+    @media @tablet-width {
+      padding-right:  11%;
+    }
+
   }
   &&--tel {
-    margin-bottom: 50px;
+    margin-bottom: 23px;
     background: url("../img/icon-phone.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 79%,  #e6e6e6 79%);
+
+    @media @tablet-width {
+      background: url("../img/icon-phone.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 91%,  #e6e6e6 91%);
+    }
+
   }
   &&--email {
     background: url("../img/icon-mail.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 79%,  #e6e6e6 79%);
+
+  @media @tablet-width {
+    background: url("../img/icon-mail.svg") top 50% right 20px no-repeat, linear-gradient(to right, #f2f2f2 91%,  #e6e6e6 91%);
+  }
+
+  }
+}
+
+
+.form-input__hidden {
+  @media @tablet-width {
+    display: none;
   }
 }

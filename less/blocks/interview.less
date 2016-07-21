@@ -6,15 +6,128 @@
 }
 
 .interview__wrapper {
+  margin-bottom: 42px;
 
+  @media @tablet-width {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 60px;
+  }
+
+}
+
+.interview__inner-wrapper {
+  @media @tablet-width {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 95px;
+  }
 }
 
 .interview__section {
   border: none;
   border-bottom: 1px solid #e5e5e5;
-  padding: 20px 20px 25px;
+  padding: 20px 20px 5px;
   &:last-child {
     border: none;
+  }
+  &&--info {
+    padding: 17px 20px 7px;
+  }
+  &&--mood {
+    padding: 18px 20px 27px;
+    & .interview__title {
+      margin-bottom: 23px;
+    }
+  }
+  &&--place {
+    padding: 18px 20px 2px;
+  }
+  &&--emotions {
+   & .interview__title {
+     margin-bottom: 15px;
+   }
+  }
+
+  @media @tablet-width {
+    border: none;
+    width: 100%;
+    &&--fio {
+      order: 2;
+      padding: 20px 0 5px;
+      padding-left: 39px;
+      & .interview__title {
+        margin-bottom: 57px;
+        text-align: left;
+        padding-left: 17px;
+      }
+    }
+    &&--info {
+      order: 3;
+      padding: 43px 0 7px;
+      display: flex;
+      & .interview__title {
+        order: 1;
+        margin-bottom: 25px;
+      }
+      & .form-input--info:nth-child(1) {
+        order: 3;
+      }
+      & .form-input--info:nth-child(2) {
+        order: 2;
+        margin-bottom: 0;
+      }
+      & .form-input__hidden {
+        display: inline;
+    }
+
+    }
+    &&--mood {
+      order: 1;
+      padding:18px 0 2px;
+      position: relative;
+      & .interview__title {
+        margin-bottom: 59px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 85%;
+        background-color: #e2e2e2;
+        top: 24px;
+        right: 2px;
+      }
+    }
+    &&--place {
+      order: 4;
+      padding: 26px 0 2px;
+      & .interview__title {
+        padding: 0 185px;
+        order: 1;
+        margin-bottom: 42px;
+      }
+    }
+    &&--emotions {
+      order: 5;
+      padding: 33px 0 12px;
+      & .interview__title {
+        margin-bottom: 58px;
+      }
+    }
+    &&--fio,&&--mood {
+      width: 324px;
+      box-sizing: border-box;
+      & .interview__title {
+        text-align: left;
+      }
+      & .interview__title:after, .interview__title:before {
+        display: none;
+      }
+    }
   }
 }
 
@@ -55,4 +168,12 @@
 
 .interview__footer {
   padding: 0 20px;
+
+  @media @tablet-width {
+    padding:  0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 }

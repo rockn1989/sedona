@@ -1,9 +1,29 @@
 
 .form-checkbox {
   display: block;
-  margin-bottom: 43px;
+  margin-bottom: 23px;
   .clearfix();
   cursor: pointer;
+
+  @media @tablet-width {
+    width: 200px;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    &:nth-child(1) {
+      order: 1;
+      margin-right: 50px;
+    }
+    &:nth-child(2) {
+      order: 3;
+      margin-right: 50px;
+    }
+    &:nth-child(3) {
+      order: 2;
+    }
+    &:nth-child(4) {
+      order: 4;
+    }
+  }
 
   @media @desktop-width {
     display: block;
@@ -35,7 +55,7 @@
   float: left;
   width: 56px;
   height: 56px;
-  margin-right: 32px;
+  margin-right: 22px;
   border-radius: 3px;
   position: relative;
   background-color: #f2f2f2;
@@ -61,12 +81,12 @@
   font-weight: bold;
   color: #283645;
   display: block;
-  padding-top: 14px;
+  padding-top: 13px;
 
   @media @tablet-width {
-    padding-top: 2px;
+    padding-top: 13px;
   }
-  @media @tablet-width {
+  @media @desktop-width {
     padding-top: 3px;
   }
 }
