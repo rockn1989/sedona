@@ -1,28 +1,14 @@
 
-.map {
+.map__google-map {
   position: relative;
   min-height: 350px;
   background-repeat: no-repeat;
-  .background-retina('bg-map-mobile', 'jpg');
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 28px;
-    height: 28px;
-    transform: translateX(-50%) translateY(-50%);
-    top: 50%;
-    left: 50%;
-    background: url("../img/icon-map-marker.svg") no-repeat;
-    cursor: pointer;
-  }
+}
 
-  @media @tablet-width {
-    .background-retina('bg-map-tablet', 'jpg');
-  }
-
-  @media @desktop-width {
-    .background-retina('bg-map-desktop', 'jpg');
-  }
-
+.map__map-marker {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
 }
