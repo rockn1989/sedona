@@ -167,7 +167,16 @@
         </section>
 
         <section class="map">
-
+            <div class="map__google-map">
+                <picture>
+                    <source media="(min-width:1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+                    <source media="(min-width:648px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+                    <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" width="100%" height="100%" alt="Пост Бориса">
+                </picture>
+                <div class="map__map-marker">
+                    <img src="img/icon-map-marker.svg" alt="Marker">
+                </div>
+            </div>
         </section>
 
         <footer class="page-footer">
@@ -189,6 +198,8 @@
             </div>
         </footer>
     </div>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
     <script src="js/main-nav.js"></script>
+    <script src="js/map-api.js"></script>
 </body>
 </html>
