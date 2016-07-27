@@ -49,12 +49,12 @@ gulp.task('csscomb', function() {
 });
 
 gulp.task("svgmin", function () {
-    return gulp.src("img/*.svg")
+    return gulp.src("build/img/**/*.svg")
         .pipe(svgmin())
         .pipe(gulp.dest("build/img/"));
 });
 
-gulp.task("svgstore",["svgmin"], function () {
+gulp.task("svgstore"/*,["svgmin"]*/, function () {
     return gulp
         .src("build/img/*.svg")
         .pipe(svgstore({
