@@ -54,7 +54,7 @@ gulp.task("svgmin", function () {
         .pipe(gulp.dest("build/img/"));
 });
 
-gulp.task("svgstore"/*,["svgmin"]*/, function () {
+gulp.task("svgstore", function () {
     return gulp
         .src("build/img/*.svg")
         .pipe(svgstore({
