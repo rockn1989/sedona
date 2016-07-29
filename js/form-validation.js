@@ -2,10 +2,10 @@
 
     var btnSubmit = document.querySelector('.button.button--send');
     var interviewForm = document.querySelector('.interview');
+
     function validation(form) {
         for(var i = 0; i < form.elements.length; i++) {
             if(form.elements[i].tagName == 'FIELDSET') continue;
-           // console.log(form.elements[i].className + ':' + form.elements[i].id+ "\n");
 
             form.elements[i].classList.remove('error');
 
@@ -46,15 +46,22 @@
         return 1;
     }
 
+    function elBlur() {
+        this.classList.remove('error');
+        this.removeEventListener('blur', elBlur);
+    }
+
     function sendError(el, text) {
+
         el.classList.add('error');
+        el.addEventListener('blur', elBlur);
 
         if(text) {
             var msgError = document.createElement('span');
             msgError.classList.add('error__text');
             msgError.innerText = text;
             el.parentNode.insertAdjacentElement('beforeEnd', msgError);
-            //setTimeout(function(){ el.parentNode.removeChild(msgError)}, 3000);
+            setTimeout(function(){ el.parentNode.removeChild(msgError)}, 3000);
         }
 
     }
@@ -66,6 +73,8 @@
             interviewForm.submit();
         }
     });
+
+
 
 
 
