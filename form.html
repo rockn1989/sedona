@@ -86,16 +86,16 @@
                             <fieldset class="interview__section interview__section--fio">
                                 <p class="interview__title">Представьтесь<span class="form-input__hidden">, пожалуйста</span>:</p>
                                 <div class="form-input">
-                                    <label class="form-input__label" for="name">Имя:</label>
-                                    <input class="form-input__text" type="text" id="name" placeholder="Петр">
+                                    <label class="form-input__label" for="username">Имя:</label>
+                                    <input class="form-input__text" type="text" id="username" name="username" placeholder="Петр" pattern="[a-zA-ZА-Яа-я0-9_]{2,}" required>
                                 </div>
                                 <div class="form-input">
                                     <label class="form-input__label" for="surname">Фамилия:</label>
-                                    <input class="form-input__text" type="text" id="surname" placeholder="Иванов">
+                                    <input class="form-input__text" type="text" id="surname" name="surname" placeholder="Иванов" pattern="[a-zA-ZА-Яа-я0-9_]{2,}" required>
                                 </div>
                                 <div class="form-input">
                                     <label class="form-input__label" for="patronymic">Отчество:</label>
-                                    <input class="form-input__text" type="text" id="patronymic" placeholder="Александрович">
+                                    <input class="form-input__text" type="text" id="patronymic" name="patronymic" placeholder="Александрович" pattern="[a-zA-ZА-Яа-я0-9_]{2,}" required>
                                 </div>
                             </fieldset>
                             <fieldset class="interview__section interview__section--info">
@@ -103,11 +103,11 @@
                                 <div class="interview__inner-wrapper interview__inner-wrapper--no-padding">
                                     <div class="form-input form-input--info">
                                         <label class="form-input__label form-input__label--info" for="tel"><span class="form-input__hidden">Контактный</span> телефон:</label>
-                                        <input class="form-input__text form-input__text--info form-input__text--tel" type="text" id="tel" placeholder="Введите телефон">
+                                        <input class="form-input__text form-input__text--info form-input__text--tel" type="number" id="tel" name="tel" placeholder="Введите телефон" min="11" required>
                                     </div>
                                     <div class="form-input form-input--info">
                                         <label class="form-input__label form-input__label--info" for="email">Электронная почта:</label>
-                                        <input class="form-input__text form-input__text--info form-input__text--email" type="text" id="email" placeholder="Введите e-mail">
+                                        <input class="form-input__text form-input__text--info form-input__text--email" type="email" id="email" name="email" placeholder="Введите e-mail" required>
                                     </div>
                                 </div>
                             </fieldset>

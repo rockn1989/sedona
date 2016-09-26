@@ -2,16 +2,14 @@
 (function() {
     var likeBox = document.querySelectorAll('.user-post__like-svg');
 
-
     function likeIt() {
-        var like;
-        var likeCountBox = this.parentNode.querySelector('.user-post__like-counter');
+        var likeCountBox = this.nextElementSibling;
         likeCountBox.innerText = parseInt(likeCountBox.innerText) + 1;
-        this.removeEventListener('click',likeIt);
+        this.removeEventListener('click', likeIt, true);
     }
 
     for(var i = 0; i < likeBox.length; i++) {
-        likeBox[i].addEventListener('click', likeIt, false);
+        likeBox[i].addEventListener('click', likeIt, true);
     }
 
 })();
